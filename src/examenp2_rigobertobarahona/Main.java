@@ -38,7 +38,7 @@ public class Main extends javax.swing.JFrame {
         Modificar_Costo = new javax.swing.JFormattedTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         Carros_Listar = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        Modificar_Button = new javax.swing.JButton();
         Modificar_Spinner = new javax.swing.JSpinner();
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -72,6 +72,12 @@ public class Main extends javax.swing.JFrame {
 
         Crear_Button.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         Crear_Button.setText("CREAR");
+        Crear_Button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Crear_Button.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Crear_ButtonMouseClicked(evt);
+            }
+        });
 
         jLabel7.setText("Marca");
 
@@ -91,8 +97,9 @@ public class Main extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(Carros_Listar);
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton1.setText("MODIFICAR");
+        Modificar_Button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Modificar_Button.setText("MODIFICAR");
+        Modificar_Button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         Modificar_Spinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
 
@@ -143,7 +150,7 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Crear_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Modificar_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(60, 60, 60))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
@@ -190,7 +197,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(Modificar_Modelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Modificar_Ano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Modificar_Costo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Modificar_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(237, Short.MAX_VALUE))
@@ -287,6 +294,10 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Crear_CostoActionPerformed
 
+    private void Crear_ButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Crear_ButtonMouseClicked
+    
+    }//GEN-LAST:event_Crear_ButtonMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -330,11 +341,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField Crear_Marca;
     private javax.swing.JFormattedTextField Crear_Modelo;
     private javax.swing.JFormattedTextField Modificar_Ano;
+    private javax.swing.JButton Modificar_Button;
     private javax.swing.JFormattedTextField Modificar_Costo;
     private javax.swing.JFormattedTextField Modificar_Marca;
     private javax.swing.JFormattedTextField Modificar_Modelo;
     private javax.swing.JSpinner Modificar_Spinner;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
